@@ -1,0 +1,38 @@
+{
+  "saved_at": "2026-05-30 20:15:38",
+  "model_file": "best_model.joblib",
+  "feature_selection": {
+    "method": "MutualInfo_p90",
+    "n_features": 8,
+    "features": [
+      "humility_challenging",
+      "struggle_ratio",
+      "grind_capacity",
+      "stubbornness_index",
+      "impulsive_help_ratio",
+      "hint_dependency_gravity",
+      "adaptive_learning_capacity",
+      "Psych_Calculated_Risk_Growth"
+    ]
+  },
+  "training": {
+    "model": "SVR_Linear",
+    "best_params": {
+      "model__epsilon": 0.5,
+      "model__C": 1.0
+    },
+    "tuning": "RandomizedSearchCV",
+    "cv_strategy": "KFold(n_splits=5)",
+    "train_set_size": 684,
+    "holdout_size": 172,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_rmse_dev": 0.5351,
+    "holdout_rmse": 0.4931,
+    "holdout_mae": 0.3985,
+    "holdout_r2": 0.0812,
+    "pearson_r": 0.295,
+    "pearson_p": 8.53008718572875e-05
+  }
+}

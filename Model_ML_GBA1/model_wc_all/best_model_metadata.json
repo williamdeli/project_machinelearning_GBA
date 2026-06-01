@@ -1,0 +1,71 @@
+{
+  "saved_at": "2026-05-30 21:46:49",
+  "model_file": "best_model.joblib",
+  "feature_selection": {
+    "method": "RF_Importance_med",
+    "n_features": 40,
+    "features": [
+      "sum_weighted_score",
+      "struggle_ratio",
+      "score_velocity",
+      "hard_challenge_efficiency",
+      "hint_reading_duration",
+      "engagement_persistence",
+      "impulsive_help_ratio",
+      "carefulness_index",
+      "contemplation_index",
+      "exploration_efficiency",
+      "hyper_curiosity_index",
+      "time_diff_end_vs_start",
+      "time_diff_phase3_vs_phase1",
+      "time_diff_max_vs_avg",
+      "ratio_hint_time",
+      "ratio_success_per_duration",
+      "PCA_Duration",
+      "PCA_Hints",
+      "PCA_Dur_x_PCA_Hints",
+      "PCA_Dur_squared",
+      "Comp_Awareness_Limit",
+      "Psych_Flow_Stamina",
+      "Psych_Impulsive_Quit",
+      "ratio_struggle_time",
+      "inter_sweet_victory",
+      "PCA_Performance_Star",
+      "HighOrd_Star_x_Effort",
+      "ratio_score_per_hint",
+      "inter_exploratory_brilliance",
+      "inter_obsessive_correction",
+      "inter_cowardice_penalty",
+      "HighOrd_Score_x_PCAStar",
+      "HighOrd_Score_x_PCADuration",
+      "Comp_GBA_DS_Anchored",
+      "Comp_GBA_AoL_Anchored",
+      "Feat_Resilient_Explorer",
+      "Feat_Ego_vs_Capacity",
+      "Feat_Strategic_Growth",
+      "Mutant_AoL_Resilience",
+      "Mutant_Ego_Death"
+    ]
+  },
+  "training": {
+    "model": "SVR_RBF",
+    "best_params": {
+      "model__gamma": "scale",
+      "model__epsilon": 0.5,
+      "model__C": 0.1
+    },
+    "tuning": "RandomizedSearchCV",
+    "cv_strategy": "KFold(n_splits=5)",
+    "train_set_size": 684,
+    "holdout_size": 172,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_rmse_dev": 0.5993,
+    "holdout_rmse": 0.5656,
+    "holdout_mae": 0.4345,
+    "holdout_r2": 0.0718,
+    "pearson_r": 0.2849,
+    "pearson_p": 0.00015209420529955462
+  }
+}

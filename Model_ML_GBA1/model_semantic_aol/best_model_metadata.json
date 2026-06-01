@@ -1,0 +1,43 @@
+{
+  "saved_at": "2026-05-30 22:27:24",
+  "model_file": "best_model.joblib",
+  "feature_selection": {
+    "method": "Pearson_gt0.20",
+    "n_features": 12,
+    "features": [
+      "sum_weighted_score",
+      "humility_challenging",
+      "struggle_ratio",
+      "score_velocity",
+      "impulsive_help_ratio",
+      "ratio_redo_success",
+      "Psych_Calculated_Risk",
+      "inter_exploratory_brilliance",
+      "inter_obsessive_correction",
+      "inter_cowardice_penalty",
+      "Feat_Resilient_Explorer",
+      "Mutant_Omega_Curiosity"
+    ]
+  },
+  "training": {
+    "model": "SVR_RBF",
+    "best_params": {
+      "model__gamma": "scale",
+      "model__epsilon": 0.5,
+      "model__C": 0.1
+    },
+    "tuning": "RandomizedSearchCV",
+    "cv_strategy": "KFold(n_splits=5)",
+    "train_set_size": 684,
+    "holdout_size": 172,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_rmse_dev": 0.6996,
+    "holdout_rmse": 0.651,
+    "holdout_mae": 0.5209,
+    "holdout_r2": 0.1495,
+    "pearson_r": 0.3912,
+    "pearson_p": 1.1238440769636277e-07
+  }
+}

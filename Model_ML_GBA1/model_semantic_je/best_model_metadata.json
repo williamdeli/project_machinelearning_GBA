@@ -1,0 +1,47 @@
+{
+  "saved_at": "2026-05-30 22:09:42",
+  "model_file": "best_model.joblib",
+  "feature_selection": {
+    "method": "Spearman_gt0.20",
+    "n_features": 16,
+    "features": [
+      "sum_weighted_score",
+      "struggle_ratio",
+      "score_velocity",
+      "boldness_score",
+      "adaptive_learning_capacity",
+      "Comp_Joyous_Exploration",
+      "Psych_Calculated_Risk",
+      "ratio_score_per_hint",
+      "inter_exploratory_brilliance",
+      "inter_obsessive_correction",
+      "inter_cowardice_penalty",
+      "Feat_Resilient_Explorer",
+      "Feat_Ego_vs_Capacity",
+      "Feat_Strategic_Growth",
+      "Mutant_AoL_Resilience",
+      "Mutant_Omega_Curiosity"
+    ]
+  },
+  "training": {
+    "model": "KNN_Regressor",
+    "best_params": {
+      "model__weights": "uniform",
+      "model__p": 1,
+      "model__n_neighbors": 15
+    },
+    "tuning": "RandomizedSearchCV",
+    "cv_strategy": "KFold(n_splits=5)",
+    "train_set_size": 684,
+    "holdout_size": 172,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_rmse_dev": 1.045,
+    "holdout_rmse": 1.0621,
+    "holdout_mae": 0.8574,
+    "holdout_r2": 0.0761,
+    "pearson_r": 0.2934,
+    "pearson_p": 9.380063521034938e-05
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "saved_at": "2026-05-30 22:48:36",
+  "model_file": "best_model.joblib",
+  "feature_selection": {
+    "method": "RF_Importance_p80",
+    "n_features": 16,
+    "features": [
+      "score_velocity",
+      "hard_challenge_efficiency",
+      "engagement_persistence",
+      "carefulness_index",
+      "contemplation_index",
+      "exploration_efficiency",
+      "time_diff_end_vs_start",
+      "time_diff_max_vs_avg",
+      "ratio_success_per_duration",
+      "PCA_Dur_x_PCA_Hints",
+      "PCA_Dur_squared",
+      "ratio_struggle_time",
+      "HighOrd_Star_x_Effort",
+      "HighOrd_Score_x_PCADuration",
+      "Comp_GBA_DS_Anchored",
+      "Comp_GBA_AoL_Anchored"
+    ]
+  },
+  "training": {
+    "model": "KNN_Regressor",
+    "best_params": {
+      "model__weights": "uniform",
+      "model__p": 1,
+      "model__n_neighbors": 15
+    },
+    "tuning": "RandomizedSearchCV",
+    "cv_strategy": "KFold(n_splits=5)",
+    "train_set_size": 684,
+    "holdout_size": 172,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_rmse_dev": 0.7569,
+    "holdout_rmse": 0.7655,
+    "holdout_mae": 0.6207,
+    "holdout_r2": 0.0049,
+    "pearson_r": 0.1673,
+    "pearson_p": 0.028241089096326596
+  }
+}

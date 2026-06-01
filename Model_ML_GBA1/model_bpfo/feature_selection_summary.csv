@@ -1,0 +1,13 @@
+Method,N_Features,Features
+Pearson_gt0.20,2,"sum_weighted_score, avg_weighted_score"
+Pearson_gt0.15,4,"sum_weighted_score, avg_weighted_score, avg_duration_failed_round, humility_challenging"
+Spearman_gt0.20,2,"sum_weighted_score, avg_weighted_score"
+Spearman_gt0.15,3,"sum_weighted_score, avg_weighted_score, avg_duration_failed_round"
+Kendall_gt0.15,2,"sum_weighted_score, avg_weighted_score"
+Kendall_gt0.10,5,"sum_weighted_score, avg_weighted_score, avg_duration_failed_round, n_redo_failed_round, humility_challenging"
+MutualInfo_p80,7,"sum_weighted_score, avg_weighted_score, humility_challenging, n_redo, n_same, n_choose_Harder, n_hintsusedat_30"
+MutualInfo_p70,10,"sum_weighted_score, avg_weighted_score, avg_duration_failed_round, n_redo_failed_round_exclusive, percent_success_hint_after22, humility_challenging, n_redo, n_same, n_choose_Harder, n_hintsusedat_30"
+RF_Importance_p80,7,"sum_weighted_score, avg_weighted_score, n_skip_hint_under22_reverse, main_sum_duration, main_avg_duration, avg_hintsusedat, total_hint_time"
+RF_Importance_med,16,"redo_success, total_success, sum_weighted_score, avg_weighted_score, n_skip_hint_under22_reverse, percent_redo_duration_failedround, main_sum_duration, main_avg_duration, total_n_hint, n_redo, n_hintsusedat_10, n_hintsusedat_20, avg_hintsusedat, n_easy, n_normal, total_hint_time"
+Lasso_NonZero,15,"main_success_rate, avg_weighted_score, avg_duration_failed_round, n_redo_failed_round_exclusive, main_n_skip, main_sum_duration, main_avg_duration, humility_challenging, n_redo, n_easier, avg_hintsusedat, n_veryeasy, n_easy, n_normal, n_hard"
+RFE_Ridge_Top20,20,"main_success_rate, redo_success, total_success, sum_weighted_score, avg_weighted_score, percent_redo_duration_failedround, avg_duration_failed_round, main_sum_duration, main_avg_duration, humility_bottomlimit, main_n_hint, n_redo, n_easier, n_hintsusedat_10, n_hintsusedat_20, avg_hintsusedat, n_easy, n_normal, n_hard, total_hint_time"

@@ -1,0 +1,34 @@
+{
+  "saved_at": "2026-05-30 22:16:58",
+  "model_file": "best_model.joblib",
+  "feature_selection": {
+    "method": "Kendall_gt0.15",
+    "n_features": 2,
+    "features": [
+      "sum_weighted_score",
+      "inter_exploratory_brilliance"
+    ]
+  },
+  "training": {
+    "model": "RandomForest",
+    "best_params": {
+      "model__n_estimators": 200,
+      "model__min_samples_split": 5,
+      "model__max_features": "sqrt",
+      "model__max_depth": 5
+    },
+    "tuning": "RandomizedSearchCV",
+    "cv_strategy": "KFold(n_splits=5)",
+    "train_set_size": 684,
+    "holdout_size": 172,
+    "random_state": 42
+  },
+  "metrics": {
+    "cv_rmse_dev": 0.8288,
+    "holdout_rmse": 0.8788,
+    "holdout_mae": 0.7342,
+    "holdout_r2": 0.0272,
+    "pearson_r": 0.2095,
+    "pearson_p": 0.0058021736071242865
+  }
+}
